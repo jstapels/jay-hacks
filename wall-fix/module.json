@@ -3,7 +3,7 @@
     "title": "Wall Fix",
     "description": "Reduces the resistance it takes to move the endpoint of a wall.",
     "version": "0.0.1",
-    "author": "jstapels",
+    "author": "Jason Stapels",
     "minimumCoreVersion": "0.6.0",
     "compatibleCoreVersion": "0.6.1",
     "scripts": ["./wall-fix.js"],
