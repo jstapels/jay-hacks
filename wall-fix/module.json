@@ -1,0 +1,13 @@
+{
+    "name": "wall-fix",
+    "title": "Wall Fix",
+    "description": "Reduces the resistance it takes to move the endpoint of a wall.",
+    "version": "0.0.1",
+    "author": "jstapels",
+    "minimumCoreVersion": "0.6.0",
+    "compatibleCoreVersion": "0.6.1",
+    "scripts": ["./wall-fix.js"],
+    "url": "https://github.com/jstapels/foundry-vtt/tree/master/deselection",
+    "manifest": "https://raw.githubusercontent.com/jstapels/foundry-vtt/master/wall-fix/module.json",
+    "download": "https://github.com/jstapels/foundry/raw/master/wall-fix/wall-fix.zip"
+}
