@@ -15,7 +15,7 @@ This module makes moving the endpoints of walls a little more interactive by red
 ## Installation
 ### Method 1
 * Open the Foundry application and click **Install Module** in the **Add-On Modules** tab.
-* Paste the following link: https://raw.githubusercontent.com/jstapels/foundry-vtt/master/foundry-vtt/wall-fix/module.json
+* Paste the following link: https://raw.githubusercontent.com/jstapels/foundry-vtt/master/wall-fix/module.json
 * Click "Install"
 * Activate the module in your World using **Manage Modules** under the **Game Settings** tab.
 
