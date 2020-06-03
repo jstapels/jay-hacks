@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Foundry-v0.6.1-informational)
 ## Wall Fix
 
-* **Author**: jstapels
+* **Author**: Jason Stapels
 * **Version**: 0.1
 * **Minimum Foundry Compatibility**: 0.6.0
 * **System Compatibility**: Universal
