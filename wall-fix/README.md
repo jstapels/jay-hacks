@@ -1,4 +1,9 @@
 ![](https://img.shields.io/badge/Foundry-v0.6.1-informational)
+
+# Notice
+
+This module is now integrated as part of the [Multiple Wall Points Mover](https://github.com/Reaver01/mwpm) module. I would suggest you install that instead, and set a reasonable drag resistance (I like 5 pixels).
+
 ## Wall Fix
 
 * **Author**: Jason Stapels
