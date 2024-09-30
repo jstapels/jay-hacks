@@ -1,0 +1,10 @@
+{
+    "auto-effects": {
+        "settings": {
+            "effect_1": {
+                "name": "Effect 1",
+                "hint": "First effect to apply"
+            }
+        }
+    }
+}
