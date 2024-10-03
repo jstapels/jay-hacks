@@ -1,0 +1,19 @@
+{
+  "name": "jay-hacks",
+  "version": "1.0.0-alpha",
+  "description": "Foundry VTT module for Jasons Foundry Hacks",
+  "scripts": {
+    "lint": "npx eslint scripts/",
+    "lint-fix": "npx eslint scripts/ --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Stapels",
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "eslint": "^9.11.1",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.9.0",
+    "prettier": "3.3.3",
+    "prettier-eslint": "16.3.0"
+  }
+}

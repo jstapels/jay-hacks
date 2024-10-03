@@ -1,0 +1,10 @@
+{
+    "jay-hacks": {
+        "settings": {
+            "hotbar_page": {
+                "name": "Hotbar Page",
+                "hint": "Which hotbar page to populate"
+            }
+        }
+    }
+}
