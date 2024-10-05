@@ -1,9 +1,37 @@
 {
     "jay-hacks": {
         "settings": {
-            "hotbar_page": {
+            "selectHotbarPage": {
                 "name": "Hotbar Page",
-                "hint": "Which hotbar page to populate"
+                "hint": "Which hotbar page to should be automatically populated?"
+            },
+            "onlyGMs": {
+                "name": "Only GMs",
+                "hint": "Should only gamemasters have macros automatically populated?"
+            },
+            "activationAction": {
+                "name": "Action Type",
+                "hint": "Allow items that require an action for activation?"
+            },
+            "activationBonus": {
+                "name": "Bonus Type",
+                "hint": "Allow items that require a bonus action for activation?"
+            },
+            "activationReaction": {
+                "name": "Reaction Type",
+                "hint": "Allow items that require a reaction for activation?"
+            },
+            "activationSpecial": {
+                "name": "Special Type",
+                "hint": "Allow items that have a special activation cost?"
+            },
+            "activationNone": {
+                "name": "None Type",
+                "hint": "Allow items that require a none activation cost?"
+            },
+            "activationEmpty": {
+                "name": "Empty Type",
+                "hint": "Allow items that have no activation cost?"
             }
         }
     }
