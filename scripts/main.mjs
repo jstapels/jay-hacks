@@ -39,23 +39,22 @@ const log = (...args) => {
  * @returns 
  */
 const isItemAction = (item) => {
-  if (!item?.system?.activaties?.size) {
+  if (!item?.system?.activities?.size) {
     return game.settings.get(MODULE_ID, SETTING_ACTIVATION_EMPTY);
   }
 
-  const allowedActions = ACTION_LOOKUP.entries()
+  const allowedActions = Array.from(ACTION_LOOKUP.entries())
     .filter(([k]) => game.settings.get(MODULE_ID, k))
     .map(([, v]) => v);
-  const actionTypes = [...allowedActions];
-  return item?.system?.activities?.values()
-    .some((a) => actionTypes.includes(a.activation.type))
-    ?? false;
+  const actionTypes = new Set(allowedActions);
+  return Array.from(item.system.activities.values())
+    .some((activity) => actionTypes.has(activity.activation?.type));
 };
 
 const createMacroData = (item) => {
   return {
-    type: "script",
-    scope: "actor",
+    type: 'script',
+    scope: 'actor',
     name: item.name,
     img: item.img,
     command: `(await fromUuid("${item.uuid}"))?.use()`,
@@ -94,19 +93,14 @@ const tokenSelected = async (token) => {
   const macroData = items.slice(0, freeSlots.length)
     .map(createMacroData);
 
-  const macros = await Macro.create(macroData);
-
-  // Update the hotbar in bulk.
-  const update = foundry.utils.deepClone(game.user.hotbar);
-
-  for (const macro of macros) {
+  const createdMacros = await Macro.createDocuments(macroData);
+  for (const macro of createdMacros) {
     const slot = freeSlots.shift();
     log(`Assigning ${macro.name} to hotbar slot ${slot}`);
-    update[slot] = macro.id;
+    await game.user.assignHotbarMacro(macro, slot, {
+      fromSlot: null,
+    });
   }
-
-  log('Updating hotbar');
-  await game.user.update({ hotbar: update }, { diff: false, recursive: false, noHook: true });
 };
 
 
@@ -230,4 +224,3 @@ const readyHook = () => {
 
 Hooks.once('init', () => initHook());
 Hooks.once('ready', () => readyHook());
-
